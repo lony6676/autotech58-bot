@@ -5,9 +5,10 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
+import os
 
-API_TOKEN = '8028553548:AAHC0-MKNJCfeZLtpPJaQzn-1PRP6gvWLug'  # ← токен
-ADMIN_ID = 1070356951  # ← Telegram ID администратора
+API_TOKEN = os.getenv("BOT_TOKEN") # ← токен
+ADMIN_ID = int(os.getenv("ADMIN_ID"))  # ← Telegram ID администратора
 
 logging.basicConfig(level=logging.INFO)
 
